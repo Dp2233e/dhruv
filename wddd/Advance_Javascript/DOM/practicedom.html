@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <style>
+        body{
+            background-color: darkcyan;
+        }
+    </style> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        document.write('Hi hello dhruv' + '<br>');
+
+        document.writeln('Hi hello dhruv' + '<br>');
+    </script>
+
+    <hr>
+
+
+    <p id="innerHTML"></p>
+    <p id="innerText"></p>
+    <script>
+        document.getElementById('innerHTML').innerHTML = "<h1><i>Hello dhruv</i><h1>";
+        document.getElementById('innerText').innerText = "<h1>Hello dhruv<h1>";  
+    </script>
+
+    <hr>
+    <script>
+
+        function cubeof(num) {
+            let cube
+            cube = num * num * num
+            document.write(cube)
+        }
+        cubeof(8)
+    </script>
+    <br>
+    <hr>
+
+
+    <input type="text" id="dhruv" placeholder="enter number">
+    <button onclick="done()">submit</button>
+    <div id="one"></div>
+    <script>
+        function done() {
+            var a, cube;
+            a = parseInt(document.getElementById("dhruv").value);
+            Cube = a * a * a;
+            document.getElementById("one").innerHTML = Cube;
+
+        }
+    </script>
+
+    <hr>
+
+
+
+    <div class="example color">
+        <p>P element in first div with class="example color". Div's index is 0.</p>
+    </div>
+
+    <div class="example color">
+        <p>P element in second div with class="example color". Div's index is 1.</p>
+    </div>
+
+    <div class="example color">
+        <p>P element in second div with class="example color". Div's index is 1.</p>
+    </div>
+
+    <div class="example color">
+        <p>P element in second div with class="example color". Div's index is 1.</p>
+    </div>
+
+    <button onclick="myFunction()">Try it</button>
+    <button onclick="myFunction1()">Try it 1</button>
+    <script>
+        function myFunction() {
+            var d = document.getElementsByClassName("example color");
+            d[0].style.backgroundColor = "blue";
+            d[1].style.backgroundColor = "orange";
+        }
+        function myFunction1() {
+            var d = document.getElementsByClassName("example color");
+            var i;
+            for (i = 0; i < d.length; i++) {
+                d[i].style.backgroundColor = "aqua";
+            }
+        }
+    </script>
+    <br>
+    <hr>
+
+    <input name="dhruv" type="text">
+    <button onclick="abc()">raju</button>
+    <p id="demo6"></p>
+    <script>
+        function abc() {
+            var d = document.getElementsByName("dhruv")[0].value;
+            document.getElementById("demo6").innerHTML = d;
+
+        }
+    </script>
+
+    <h3>hello</h3>
+    <h3>hello</h3>
+    <h3>hello</h3>
+    <h3>hello</h3>
+    <h3>hello</h3>
+    <button onclick="find()">findh1</button>
+    <script>
+        function find(params) {
+            var totalpara = document.getElementsByTagName("h3");
+            alert("total h3 tags are: " + totalpara.length);
+
+        }
+
+
+    </script> -->
+    <br>
+    <hr>
+    <form name="myForm1">
+        <input type="password" value="" name="userPass" onkeyup="byformname()">
+        Strength:<span id="pass">no strength</span>
+    </form>
+
+
+    <script>
+        function byformname() {
+            var msg;
+            if (document.myForm1.userPass.value.length > 7) // if(document.forms["myform"]["ufn"].value>5)
+            {
+                document.getElementById('pass').innerText = "STRONG";
+                document.getElementById('pass').style.color = "green";
+            }
+            else if (document.myForm1.userPass.value.length > 5) {
+                document.getElementById('pass').innerText = "MEDIUM";
+                document.getElementById('pass').style.color = "purple";
+            }
+            else {
+                document.getElementById('pass').innerText = "WEEK  ";
+                document.getElementById('pass').style.color = "red";
+            }
+
+        }
+
+    </script>
+    <br>
+    <!-- <hr>
+    <form>
+        <input type="button" id="btn01" value="OK">
+    </form>
+    <button onclick="disableElement()">Disable</button>
+    <button onclick="enableElement()">enable</button>
+
+    <script>
+        function disableElement() {
+            document.getElementById("btn01").disabled = true;
+        }
+        function enableElement() {
+            document.getElementById("btn01").disabled = false;
+        }
+    </script>
+
+    <br>
+    <hr>
+
+    <img class="img1" src="OIP.jpg" width="486" height="266">
+    <img class="img2" src="OIP.jpg" width="362" height="255">
+    <img class="img3" src="OIP.jpg" width="362" height="255">
+    <img class="img4" src="OIP.jpg" width="362" height="255">
+    <img class="img5" src="OIP.jpg" width="362" height="255">
+    <img class="img6" src="OIP.jpg" width="362" height="255">
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <script>
+        document.getElementById("demo11").innerHTML = document.images.length;
+        document.getElementById("demo12").innerHTML = document.images[2].className;
+        // document.getElementById("demo13").innerHTML = document.images[4].id;
+    </script>
+
+    <br>
+    <hr>
+    <script>
+        function bgChange(bg) {
+            document.body.style.background = bg;
+        }
+    </script>
+
+
+
+    <table style="width:300px;height:100px">
+        <tr>
+            <td onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')"
+                style="background-color:pink">
+            </td>
+            <td onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')"
+                style="background-color:orangered">
+            </td>
+            <td onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')"
+                style="background-color:purple">
+            </td>
+        </tr>
+    </table> -->
+
+</body>
+
+</html>
